@@ -105,9 +105,9 @@ func makeScaffolding(folder, ghProject, module, app string, noApiSpec bool) erro
 		return err
 	}
 
-	intergationAction := filepath.Join(folder, ".github/workflows/ci.intergation.yaml")
-	intergationActionContent := makeIntegrationTestActionYaml()
-	if err := os.WriteFile(intergationAction, intergationActionContent, rw); err != nil {
+	integrationAction := filepath.Join(folder, ".github/workflows/ci.integration.yaml")
+	integrationActionContent := makeIntegrationTestActionYaml()
+	if err := os.WriteFile(integrationAction, integrationActionContent, rw); err != nil {
 		return err
 	}
 
